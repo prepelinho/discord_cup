@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>DISCORD CUP SLO</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .groups, .next-groups {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .group, .next-group {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .group:hover, .next-group:hover {
+    transform: translateY(-4px);
+    border-color: #0077aa;
+    background: linear-gradient(135deg, #e8f6ff, #f0fbff);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .group strong, .next-group strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #222;
+    transition: color 0.2s ease;
+  }
+
+  .group:hover strong, .next-group:hover strong {
+    color: #0077aa;
+  }
+
+  .details {
+    display: block; /* Always visible */
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .arrow {
+    font-size: 32px;
+    margin: 30px auto;
+  }
+</style>
+</head>
+<body>
+
+<h1>DISCORD CUP</h1>
+
+<h2>PRVA FAZA</h2>
+
+<div class="groups">
+  <div class="group" onclick="toggleDetails('a')">
+    <strong>Skupina A</strong>
+    <div id="a" class="details">
+      Kavke<br>Linharti<br>CG-92<br>HK Bedanc
+    </div>
+  </div>
+  <div class="group" onclick="toggleDetails('b')">
+    <strong>Skupina B</strong>
+    <div id="b" class="details">
+      FC Barcelona<br>Iskre<br>Luftarji<br>Nicky
+    </div>
+  </div>
+  <div class="group" onclick="toggleDetails('c')">
+    <strong>Skupina C</strong>
+    <div id="c" class="details">
+      Borac Banja Luka<br>Flyers<br>HK Mačkoni<br>HK Brglez
+    </div>
+  </div>
+  <div class="group" onclick="toggleDetails('d')">
+    <strong>Skupina D</strong>
+    <div id="d" class="details">
+      Kekec<br>HC Cesta<br>Ime ekipe<br>Madeira Snipers
+    </div>
+  </div>
+</div>
+
+<div class="arrow">⬇️</div>
+
+<h2>DRUGA FAZA</h2>
+
+<div class="next-groups">
+  <div class="next-group" onclick="toggleDetails('e')">
+    <strong>Skupina E</strong>
+    <div id="e" class="details">
+      #1 iz Skupine A<br>
+      #2 iz Skupine A<br>
+      #3 iz Skupine A<br>
+      #1 iz Skupine C<br>
+      #2 iz Skupine C<br>
+      #3 iz Skupine C<br>
+    </div>
+  </div>
+  <div class="next-group" onclick="toggleDetails('f')">
+    <strong>Skupina F</strong>
+    <div id="f" class="details">
+      #1 iz Skupine B<br>
+      #2 iz Skupine B<br>
+      #3 iz Skupine B<br>
+      #1 iz Skupine D<br>
+      #2 iz Skupine D<br>
+      #3 iz Skupine D<br>
+    </div>
+  </div>
+</div>
+
+<p style="margin-top: 30px; color: #666; font-size: 14px;">
+  ➤ V 2. fazo se prenesejo le točke med ekipami, ki napredujejo.<br>
+  ➤ Vsaka ekipa odigra 3 nove tekme proti ekipam iz nasprotne skupine.
+</p>
+
+<script>
+  function toggleDetails(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+<h2 style="text-align:center;">Lestvica in Rezultati PRVA FAZA</h2>
+
+<div style="max-width: 800px; margin: 0 auto;">
+  <iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQVEstJDSbU4GEjSbTorOp-hnZJJR6ZLhFRGdR547KqyteoVmFfY1iu704iye80UDtrktGc52xY22ZI/pubhtml" 
+    width="100%" 
+    height="600" 
+    frameborder="0" 
+    scrolling="yes">
+  </iframe>
+</div>
+
+<h2 style="text-align:center;">Lestvica in Rezultati DRUGI DEL</h2>
+<h3 style="text-align:center;">SLEDI...</h3>
+
+</body>
+</html>
